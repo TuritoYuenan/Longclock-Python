@@ -1,2 +1,7 @@
 __pycache__/
 secrets.env
+
+# Replit
+replit.nix
+.replit
+venv
