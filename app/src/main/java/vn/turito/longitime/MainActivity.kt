@@ -34,13 +34,14 @@ fun AppRoot() {
 
 @Composable
 fun Navbar() {
+	var active by remember { mutableIntStateOf(0) }
 	NavigationBar {
-		navbarItems.forEachIndexed { _, item ->
+		navbarItems.forEachIndexed { index, item ->
 			NavigationBarItem(
 				icon = { Icon(item.icon, item.name) },
 				label = { Text(item.name) },
-				selected = false,
-				onClick = { /*TODO*/ }
+				onClick = { active = index },
+				selected = index == active,
 			)
 		}
 	}
