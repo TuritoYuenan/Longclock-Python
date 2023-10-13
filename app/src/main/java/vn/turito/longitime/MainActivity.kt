@@ -15,8 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import vn.turito.longitime.ui.components.NavBar
-import vn.turito.longitime.ui.theme.LongitimeTheme
+import vn.turito.longitime.components.NavBar
+import vn.turito.longitime.theme.LongitimeTheme
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {

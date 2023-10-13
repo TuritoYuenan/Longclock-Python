@@ -1,4 +1,4 @@
-package vn.turito.longitime.ui.theme
+package vn.turito.longitime.theme
 
 import android.app.Activity
 import android.os.Build

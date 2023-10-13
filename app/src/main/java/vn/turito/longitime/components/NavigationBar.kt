@@ -1,4 +1,4 @@
-package vn.turito.longitime.ui.components
+package vn.turito.longitime.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Favorite
