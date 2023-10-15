@@ -23,26 +23,37 @@ android {
 
 	buildTypes {
 		release {
-			isMinifyEnabled = false
+			// Enables code shrinking, obfuscation, and optimization
+			isMinifyEnabled = true
+
+			// Enables resource shrinking
+			isShrinkResources = true
+
+			// Includes the default ProGuard rules files
 			proguardFiles(
 				getDefaultProguardFile("proguard-android-optimize.txt"),
 				"proguard-rules.pro"
 			)
 		}
 	}
+
 	buildFeatures {
 		compose = true
 	}
+
 	compileOptions {
 		sourceCompatibility = JavaVersion.VERSION_1_8
 		targetCompatibility = JavaVersion.VERSION_1_8
 	}
+
 	composeOptions {
 		kotlinCompilerExtensionVersion = "1.4.3"
 	}
+
 	kotlinOptions {
 		jvmTarget = "1.8"
 	}
+
 	packaging {
 		resources {
 			excludes += "/META-INF/{AL2.0,LGPL2.1}"
