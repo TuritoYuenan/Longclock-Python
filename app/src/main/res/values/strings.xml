@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Longitude Time</string>
+	<string name="navbar_settings">Settings</string>
 </resources>

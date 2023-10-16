@@ -41,17 +41,14 @@ fun LongitimeApp() {
 				Text(
 					"12:45",
 					Modifier.fillMaxWidth(),
-					style = clockFace
+					style = TextStyle(
+						color = MaterialTheme.colorScheme.onBackground,
+						textAlign = TextAlign.Center,
+						fontWeight = FontWeight.Black,
+						fontSize = 50.sp,
+					)
 				)
 			}
 		}
 	}
 }
-
-val clockFace: TextStyle
-	get() = TextStyle(
-		color = MaterialTheme.colorScheme.onBackground,
-		textAlign = TextAlign.Center,
-		fontWeight = FontWeight.Black,
-		fontSize = 50.sp,
-	)

@@ -11,7 +11,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-private val morningSolarpunk = lightColorScheme(
+private val solarpunk = lightColorScheme(
 	primary = md_theme_light_primary,
 	onPrimary = md_theme_light_onPrimary,
 	primaryContainer = md_theme_light_primaryContainer,
@@ -43,7 +43,7 @@ private val morningSolarpunk = lightColorScheme(
 	onSurfaceVariant = md_theme_light_onSurfaceVariant,
 )
 
-private val nightSolarpunk = darkColorScheme(
+private val lunarpunk = darkColorScheme(
 	primary = md_theme_dark_primary,
 	onPrimary = md_theme_dark_onPrimary,
 	primaryContainer = md_theme_dark_primaryContainer,
@@ -90,8 +90,8 @@ fun LongitimeTheme(
 			)
 		}
 
-		darkTheme -> nightSolarpunk
-		else -> morningSolarpunk
+		darkTheme -> lunarpunk
+		else -> solarpunk
 	}
 	val view = LocalView.current
 	if (!view.isInEditMode) {
