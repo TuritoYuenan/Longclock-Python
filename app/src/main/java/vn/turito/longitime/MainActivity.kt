@@ -1,6 +1,5 @@
 package vn.turito.longitime
 
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,8 +16,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import vn.turito.longitime.components.NavBar
-import vn.turito.longitime.theme.LongitimeTheme
+import vn.turito.longitime.components.LTimeBottomBar
+import vn.turito.longitime.components.LTimeTopBar
+import vn.turito.longitime.theme.LTimeTheme
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,28 +27,24 @@ class MainActivity : ComponentActivity() {
 	}
 }
 
-@Preview(
-	name = "Dark mode",
-	uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL
-)
+@Preview(showBackground = true)
 @Composable
-fun LongitimeApp() {
-	LongitimeTheme {
-		Scaffold(
-			bottomBar = { NavBar() }
-		) { paddingValues ->
-			Column(Modifier.padding(paddingValues)) {
-				Text(
-					"12:45",
-					Modifier.fillMaxWidth(),
-					style = TextStyle(
-						color = MaterialTheme.colorScheme.onBackground,
-						textAlign = TextAlign.Center,
-						fontWeight = FontWeight.Black,
-						fontSize = 50.sp,
-					)
+fun LongitimeApp(): Unit = LTimeTheme {
+	Scaffold(
+		topBar = { LTimeTopBar() },
+		bottomBar = { LTimeBottomBar() }
+	) { paddingValues ->
+		Column(Modifier.padding(paddingValues)) {
+			Text(
+				"12:45",
+				Modifier.fillMaxWidth(),
+				textAlign = TextAlign.Center,
+				style = TextStyle(
+					color = MaterialTheme.colorScheme.onBackground,
+					fontWeight = FontWeight.Black,
+					fontSize = 100.sp,
 				)
-			}
+			)
 		}
 	}
 }
