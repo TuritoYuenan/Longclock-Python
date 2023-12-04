@@ -26,20 +26,5 @@ fun CustomView() {
 	)
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun ClockView(pad: PaddingValues) = Column(Modifier.padding(pad)) {
-	val clock = LocalDateTime.now()
-	val clockFormat = DateTimeFormatter.ofPattern("HH:mm")
-
-	Text(
-		clock.format(clockFormat),
-		Modifier.fillMaxWidth(),
-		textAlign = TextAlign.Center,
-		style = TextStyle(
-			color = MaterialTheme.colorScheme.onBackground,
-			fontWeight = FontWeight.Black,
-			fontSize = 100.sp,
-		)
-	)
-}
+fun ClockView(pad: PaddingValues) = Column(Modifier.padding(pad)) {}

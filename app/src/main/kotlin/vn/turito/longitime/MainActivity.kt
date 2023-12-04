@@ -13,14 +13,12 @@ import vn.turito.longitime.components.LTimeTopBar
 import vn.turito.longitime.theme.LTimeTheme
 
 class MainActivity : ComponentActivity() {
-	@RequiresApi(Build.VERSION_CODES.O)
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContent { LongitimeApp() }
 	}
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Composable
 fun LongitimeApp(): Unit = LTimeTheme {
