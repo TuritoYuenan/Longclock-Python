@@ -10,7 +10,7 @@ import vn.turito.longitime.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LTimeTopBar() = CenterAlignedTopAppBar(
+fun LongitimeTopBar() = CenterAlignedTopAppBar(
 	title = { Text(stringResource(R.string.app_name)) },
 	actions = {
 		IconButton(onClick = { /*TODO*/ }) {

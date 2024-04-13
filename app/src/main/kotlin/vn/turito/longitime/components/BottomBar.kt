@@ -12,7 +12,7 @@ import androidx.compose.ui.res.stringResource
 import vn.turito.longitime.R
 
 @Composable
-fun LTimeBottomBar() = BottomAppBar(
+fun LongitimeBottomBar() = BottomAppBar(
 	actions = {
 		IconButton(onClick = {/*TODO*/ }) {
 			Icon(
